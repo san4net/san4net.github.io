@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh's Profile</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-container,
+        .social-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-name {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 600px) {
+            .profile-container {
+                flex-direction: row;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .profile-name {
+                font-size: 32px;
+            }
+
+            .social-container {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Container: Name and Profile Image -->
+    <div class="profile-container">
+        <img src="./santosh-hill.jpeg" alt="Profile Image" class="profile-image">
+        <div class="profile-name">Santosh</div>
+    </div>
+
+    <!-- Bottom Container: Social Links -->
+    <div class="social-container">
+        <div class="social-links">
+            <a href="https://san4net.medium.com/" target="_blank">
+                <img src="./medium-icon.svg" alt="Medium">
+            </a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/santosh-kumar-a3995712/" target="_blank">
+                <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="social-links">
+            <a href="https://stackoverflow.com/users/1115422/recursion" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111628.png" alt="Stack Overflow">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
