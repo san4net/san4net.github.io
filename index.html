@@ -21,6 +21,7 @@
         }
 
         .profile-container,
+        .summary-container,
         .social-container {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
@@ -37,7 +38,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .profile-image {
@@ -51,12 +52,29 @@
         .profile-image:hover {
             transform: scale(1.1);
         }
-
+    
         .profile-name {
             font-size: 28px;
             font-weight: bold;
         }
 
+        /* Summary Styles */
+        .summary-container {    
+            font-size: 16px;
+            line-height: 1.5;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Social Links */
         .social-container {
             display: flex;
             justify-content: space-around;
@@ -65,11 +83,12 @@
 
         .social-links a {
             text-decoration: none;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .social-links a:hover {
             transform: translateY(-5px);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
         }
 
         .social-links img {
@@ -97,13 +116,20 @@
     </style>
 </head>
 <body>
-    <!-- Top Container: Name and Profile Image -->
+    <!-- Profile Section -->
     <div class="profile-container">
-        <img src="./santosh-hill.jpeg" alt="Profile Image" class="profile-image">
+        <img src="./santosh-hill.jpeg" alt="Santosh's Profile Picture" class="profile-image">
         <div class="profile-name">Santosh</div>
     </div>
 
-    <!-- Bottom Container: Social Links -->
+    <!-- Summary Section -->
+    <div class="summary-container">
+        Passionate software engineer, tech blogger, and problem solver.  
+        I specialize in backend development, cloud computing, and scalable architectures.  
+        Always curious, always learning. 🚀
+    </div>
+
+    <!-- Social Links Section -->
     <div class="social-container">
         <div class="social-links">
             <a href="https://san4net.medium.com/" target="_blank">
